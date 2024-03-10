@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royalcourt - Restaurant Table Booking</title>
+  <style>
+      body{
+           background-color:lightcyan;
+      }
+
+    #website-name {
+      text-align: center;
+      font-size: 36px;
+      text-shadow: 2px 2px 4px #000000;
+      color:brown;
+    }
+    #signup-login {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      text-decoration: none;
+      color: #000;
+    }
+    #description {
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 20px;
+    }
+    #special-dishes {
+      border: 1px solid #333;
+      border-collapse: collapse;
+      font-family:Times New Roman,bold;
+      font-size:40px; 
+    }
+    #special-dishes th, #special-dishes td {
+      border: 2px solid #333;
+     font-size: 20px;
+      padding: 30px;
+    }
+    
+    #fixed-image {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+    #booking-form {
+      border: 1px solid #333;
+      padding: 20px;
+      margin-right: 20px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="website-name" style="font-weight: bold;">Royalcourt</div>
+  <a href="2.html" id="signup-login">Signup/Login</a>
+<center>
+
+  <p id="description">Welcome to Royalcourt, where dining is an experience. Indulge in our exquisite dishes while enjoying a luxurious ambiance.</p>
+</center>
+  
+  <table id="special-dishes">
+    <caption>Special Dishes</caption>
+    <tr>
+      <th>Dish</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td><img src="friedrice.jpg" alt="Dish 1"></td>
+      <td>Fried rice</td>
+      <td>$20</td>
+    </tr>
+    <tr>
+      <td><img src="biriyani.jpg" alt="Dish 2"></td>
+      <td>biriyani</td>
+      <td>$25</td>
+    </tr>
+  
+  </table>
+  
+ 
+<center>
+  <div id="animated-dishes">
+    <img src="heading.avif" alt="hello" style="animation: changeDish 5s infinite;">
+  </div>
+</center>
+  
+ 
+  <a href="#booking-form" id="fixed-image"><img src="tablebooking.jpg" alt="Table Booking"></a>
+  
+  
+  <div id="booking-form">
+    <h2>Table Booking</h2>
+    <form action="#" method="post">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  
+  
+  <style>
+    @keyframes changeDish {
+      0% { transform: scale(0.5); }
+      50% { transform: scale(1); }
+      100% { transform: scale(0.5); }
+    }
+    #animated-dishes img {
+      width: 150px;
+      height: auto;
+    }
+  </style>
+
+</body>
+</html>
+
+
