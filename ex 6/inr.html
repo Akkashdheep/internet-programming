@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dollar to INR Converter</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#convertBtn").click(function(){
+            var dollars = parseFloat($("#dollars").val());
+
+            if (isNaN(dollars)) {
+                alert("Please enter a valid number for dollars.");
+                return;
+            }
+
+            var inr = dollars * 75;
+            $("#result").text("Converted amount in INR: " + inr.toFixed(2));
+        });
+    });
+</script>
+</head>
+<body>
+    <h2>Dollar to INR Converter</h2>
+    <label for="dollars">Enter amount in dollars:</label>
+    <input type="text" id="dollars">
+    <button id="convertBtn">Convert to INR</button>
+    <div id="result"></div>
+</body>
+</html>
