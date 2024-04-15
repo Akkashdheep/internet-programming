@@ -18,8 +18,8 @@ String a="";
         
         <%  Connection c =DriverManager.getConnection("jdbc:derby://localhost:1527/student");
         Statement st=c.createStatement();
-        //ResultSet rs=st.executeQuery("SELECT Count (student_id) from student");
-        //ResultSet rs=st.executeQuery("SELECT AVG (age) from student");
+        ResultSet rs=st.executeQuery("SELECT Count (student_id) from student");
+        ResultSet rs=st.executeQuery("SELECT AVG (age) from student");
         ResultSet rs=st.executeQuery("SELECT dept,COUNT(*) AS num_stu From students GROUP BY dept ORDER BY num_stu FETCH FIRST 1 ROWS ONLY");
         %>
         <% if (rs.next()){
