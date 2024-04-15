@@ -23,8 +23,8 @@ String a="";
         ResultSet rs=st.executeQuery("SELECT dept,COUNT(*) AS num_stu From students GROUP BY dept ORDER BY num_stu FETCH FIRST 1 ROWS ONLY");
         %>
         <% if (rs.next()){
-            //out.print("The number of students present:");
-            //out.print("Average age of the students:");
+            out.print("The number of students present:");
+            out.print("Average age of the students:");
             a=rs.getString("dept");
          }
         out.println("The dept with high no of Students:"+a);
