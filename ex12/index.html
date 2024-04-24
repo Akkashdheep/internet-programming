@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <script>
+        function getEmployeeDetails() {
+            var employeeId = document.getElementById("employeeId").value;
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    parseXML(this);
+                }
+            };
+            xhttp.open("GET", "employees.xml", true);
+            xhttp.send();
+        }
+
+        function parseXML(xml) {
+            var xmlDoc = xml.responseXML;
+            var employees = xmlDoc.getElementsByTagName("employee");
+            var employeeId = document.getElementById("employeeId").value;
+            for (var i = 0; i < employees.length; i++) {
+                var empId = employees[i].getElementsByTagName("employeeId")[0].childNodes[0].nodeValue;
+                if (empId === employeeId) {
+                    var name = employees[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+                    var department = employees[i].getElementsByTagName("department")[0].childNodes[0].nodeValue;
+                    var position = employees[i].getElementsByTagName("position")[0].childNodes[0].nodeValue;
+                    var salary = employees[i].getElementsByTagName("salary")[0].childNodes[0].nodeValue;
+                    document.getElementById("employeeDetails").innerHTML = "Name: " + name + "<br>Department: " + department + "<br>Position: " + position + "<br>Salary: $" + salary;
+                    return;
+                }
+            }
+            document.getElementById("employeeDetails").innerHTML = "Employee not found!";
+        }
+    </script>
+</head>
+<body>
+    <label for="employeeId">Enter Employee ID: </label>
+    <input type="text" id="employeeId">
+    <button onclick="getEmployeeDetails()">Get Details</button>
+    <div id="employeeDetails"></div>
+</body>
+</html>
