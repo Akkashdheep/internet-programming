@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee>
+        <employeeId>1</employeeId>
+        <name>Klaus Michaelson</name>
+        <department>Engineering</department>
+        <position>Software Engineer</position>
+        <salary>60000</salary>
+    </employee>
+    <employee>
+        <employeeId>2</employeeId>
+        <name>Elijah Michaelson</name>
+        <department>Marketing</department>
+        <position>Marketing Manager</position>
+        <salary>75000</salary>
+    </employee>
+    <employee>
+        <employeeId>3</employeeId>
+        <name>Stefan Salvatore</name>
+        <department>Finance</department>
+        <position>Financial Analyst</position>
+        <salary>65000</salary>
+    </employee>
+    <employee>
+        <employeeId>4</employeeId>
+        <name>Damon Salvatore</name>
+        <department>Human Resources</department>
+        <position>HR Manager</position>
+        <salary>80000</salary>
+    </employee>
+    <employee>
+        <employeeId>5</employeeId>
+        <name>Tyler Lockwood</name>
+        <department>Operations</department>
+        <position>Operations Manager</position>
+        <salary>70000</salary>
+    </employee>
+</employees>
+
